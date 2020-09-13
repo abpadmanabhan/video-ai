@@ -3,13 +3,18 @@
 A project inspired from [First-order Motion modeling](https://github.com/AliaksandrSiarohin/first-order-model).
 Deals with taking in a video driver & image element and blending them to make a video-over-static-image overlap.
 
+| <img src="samples/image0.png" alt="Sample image" width="280"/> | <span style="font-size:2em;">+</span> | <span style="font-size:3em;">🔊</span> | =   | <img src="samples/output0.gif" alt="Result" width="280"/> |
+| -------------------------------------------------------------- | ------------------------------------- | ------------------------------------- | --- | --------------------------------------------------------- |
+
+-------------
+
 ## Results
 
 Available in [samples](samples) directory.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Project requires Python v3.8 or later. Use Python's package manager [pip](https://pip.pypa.io/en/stable/) to install dependencies.
 ```bash
 pip install -r requirements.txt
 ```
@@ -24,7 +29,7 @@ For production usage, the app can be run with `gunicorn` wsgi server:
 ```bash
 gunicorn main:app
 ```
-This project supports Heroku deployment (refer `./Procfile`)
+This project supports **Heroku** deployment (refer `./Procfile`)
 
 ## Demo
 
