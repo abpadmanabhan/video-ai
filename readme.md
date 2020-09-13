@@ -5,9 +5,7 @@ Deals with taking in a video driver & image element and blending them to make a 
 
 ## Results
 
-<video width="300" height="300" controls><source src="samples/result0.mp4" type="video/mp4"></video>
-<video width="300" height="300" controls><source src="samples/result1.mp4" type="video/mp4"></video>
-<video width="300" height="300" controls><source src="samples/result2.mp4" type="video/mp4"></video>
+Available in [samples](samples) directory.
 
 ## Installation
 
