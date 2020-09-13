@@ -1,0 +1,682 @@
+/* cyrillic-ext */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2)
+      format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2)
+      format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWZ0bf8pkAp6a.woff2)
+      format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVp0bf8pkAp6a.woff2)
+      format("woff2");
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2)
+      format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2)
+      format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOX-hpKKSTj5PW.woff2)
+      format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOVuhpKKSTj5PW.woff2)
+      format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOXuhpKKSTj5PW.woff2)
+      format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOUehpKKSTj5PW.woff2)
+      format("woff2");
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOXehpKKSTj5PW.woff2)
+      format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOXOhpKKSTj5PW.woff2)
+      format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOX-hpKKSTj5PW.woff2)
+      format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOVuhpKKSTj5PW.woff2)
+      format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXuhpKKSTj5PW.woff2)
+      format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUehpKKSTj5PW.woff2)
+      format("woff2");
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXehpKKSTj5PW.woff2)
+      format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOXOhpKKSTj5PW.woff2)
+      format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"),
+    url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #212121;
+  background-image: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.3) 50%
+    ),
+    url(http://www.cfdesigner.com/codepen/rocket-page-bkg.png);
+  background-position: center;
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
+  font-size: 100%;
+  letter-spacing: 0.03125rem;
+  line-height: 1.5rem;
+  position: relative;
+  width: 100vw;
+  min-height: 100%;
+  padding: 70px 0 50px;
+  color: #fff;
+}
+
+h1,
+p {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#container,
+#upload-container {
+  color: #fff;
+  text-align: center;
+  min-height: 480px;
+  max-width: 90%;
+  margin: 0 auto 20px;
+  padding: 0 15px;
+}
+
+#result-container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 400px;
+}
+
+.compact {
+  width: 320px;
+}
+
+.red-bg {
+  background-color: #b71c1c;
+}
+
+#upload-container .header,
+#upload-container .fields {
+  display: flex;
+}
+
+#upload-container .field {
+  margin: 8px 0;
+  justify-content: center;
+}
+
+#select-form .field {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#select-form .field label {
+  margin: 4px;
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+}
+
+#upload-container input[type="file"] {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.fields {
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 600px) {
+  .fields {
+    flex-direction: column;
+  }
+}
+
+.tabs-header-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.tabs {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 0.8em;
+  background: #333;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.tab {
+  min-width: 70px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.tab.current {
+  background: #b71c1c;
+}
+
+.buttons {
+  margin: 0;
+  padding: 0;
+}
+.buttons li {
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
+.buttons li:last-child {
+  margin-bottom: 0;
+}
+.buttons a {
+  border: solid 2px #fff;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-weight: 600;
+  padding: 1rem;
+  padding: calc(1rem - 2px);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.buttons a:hover {
+  background: #737d9c;
+  border-color: #737d9c;
+}
+.buttons .primary {
+  background-color: #1976d2;
+  border-color: #1976d2;
+  border: none;
+  border-bottom: solid 4px #0069c0;
+  color: #fff;
+}
+.buttons .primary:hover {
+  background: #0d47a1;
+  border-color: #002171;
+}
+.buttons .primary:active {
+  background: #1976d2;
+}
+.buttons .minor {
+  border: none;
+  color: #c1c1c1;
+  display: inline-block;
+  padding: 0.5rem;
+}
+.buttons .minor:hover {
+  background: none;
+  color: #fff;
+}
+.buttons .disabled {
+  background: none;
+  border: solid 2px #969696;
+  color: #969696;
+  pointer-events: none;
+}
+
+form .field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+form .field input[type="file"] {
+  margin: 0 10px;
+  width: 100%;
+  max-width: 250px;
+}
+
+form input[type="password"],
+form input[type="text"],
+form input[type="submit"] {
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font: inherit;
+  padding: 1rem;
+  width: 100%;
+}
+
+form input[type="password"],
+form input[type="text"] {
+  background-color: #3b4148;
+  border-radius: 0 4px 4px 0;
+}
+
+form input[type="password"]:focus,
+form input[type="password"]:hover,
+form input[type="text"]:focus,
+form input[type="text"]:hover {
+  background-color: #434a52;
+  outline: none;
+}
+
+form input[type="submit"] {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 1rem;
+  padding: calc(1rem - 2px);
+  background: transparent;
+}
+
+video:focus,
+form input[type="submit"]:focus {
+  outline: none;
+}
+
+video {
+  cursor: pointer;
+}
+
+form input[type="file"] {
+  color: white;
+  display: inline-block;
+  background: transparent;
+  border: none;
+  padding: 0.6em 0.8em;
+  font-weight: 700;
+  border-radius: 3px;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+
+form input[type="file"]:focus {
+  outline: none;
+}
+
+form label {
+  background-color: #363b41;
+  border-radius: 4px 0 0 4px;
+  padding: 1rem;
+}
+
+fieldset {
+  padding: 1em 2em;
+  width: 400px;
+  max-width: 100%;
+  margin: 0 5px 25px 0;
+  min-height: 220px;
+}
+
+fieldset:last-child {
+  margin-right: 0;
+}
+
+legend {
+  padding: 0 8px;
+  font-size: 0.75em;
+  line-height: 1.4em;
+}
+
+#upload-container form {
+  margin: 30px 0 20px;
+}
+
+#upload-container form label {
+  padding: 5px 12px;
+  font-size: 0.8em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.preset-image,
+.preset-video {
+  height: 100%;
+  max-width: 100%;
+}
+
+.selected {
+  background: #b71c1c;
+}
+
+#select-form input:checked + label {
+  background: #b71c1c;
+}
+
+.icon {
+  display: inline-block;
+  fill: #fff;
+  height: 1.5rem;
+  width: 2rem;
+  vertical-align: middle;
+}
+
+#footer {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  font-size: 0.875em;
+  text-align: center;
+  width: 100%;
+  font-size: 0.8em;
+  background-color: #111;
+}
+#footer ul {
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+#footer li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0 1em;
+}
+#footer li:first-child {
+  border: none;
+}
+#footer a {
+  color: #737d9c;
+  text-decoration: none;
+}
+#footer a:hover {
+  color: #c1c1c1;
+}
+
+.logo {
+  width: 100%;
+  height: 300px;
+  margin: 15px 0 20px;
+}
+
+.video-wrapper {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+/* START - Progress bar */
+.progress-bar {
+  background: #f1f6fa;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 1px #ccd6dd;
+  height: 15px;
+  overflow: hidden;
+  position: relative;
+  text-indent: 100%;
+  width: 300px;
+  font-size: 1.1em;
+}
+.progress-bar--counter {
+  margin-left: 15px;
+}
+.progress-bar--counter .hidden {
+  display: inline-block;
+}
+.progress-bar--wrap {
+  display: -webkit-box;
+  display: flex;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  margin: 30px 0;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.progress-bar--inner {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  border-radius: 8px;
+  height: 100%;
+  left: 0;
+  min-height: 10px;
+  position: absolute;
+  top: 0;
+}
+.progress-bar--blue .progress-bar--inner {
+  background-color: #068eda;
+}
+/* END - Progress Bar */
+
+#loader-msg {
+  text-align: center;
+}
+
+.LoaderBalls {
+  margin: 35px auto;
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.LoaderBalls__item {
+  width: 12px;
+  height: 10px;
+  border-radius: 50%;
+  background: #0069c0;
+}
+.LoaderBalls__item:nth-child(1) {
+  animation: bouncing 0.4s alternate infinite
+    cubic-bezier(0.6, 0.05, 0.15, 0.95);
+}
+.LoaderBalls__item:nth-child(2) {
+  animation: bouncing 0.4s 0.1s alternate infinite
+    cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
+}
+.LoaderBalls__item:nth-child(3) {
+  animation: bouncing 0.4s 0.2s alternate infinite
+    cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
+}
+
+@keyframes bouncing {
+  0% {
+    transform: translate3d(0, 10px, 0) scale(1.2, 0.85);
+  }
+  100% {
+    transform: translate3d(0, -20px, 0) scale(0.9, 1.1);
+  }
+}
+
+/* Stays at last */
+.hidden {
+  display: none;
+}

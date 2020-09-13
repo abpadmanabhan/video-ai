@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>VideoAI: Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    {% include 'importcss.html' %}
+</head>
+
+<body>
+    {% include 'header.html' %}
+    <div id="menu">
+        {% for file in files %}
+        <div class="item">
+            <div class="image">
+                <video width="100%" height="100%" src="{{ file.url }}" type="video/mp4"></video>
+            </div>
+            <div class="details">
+                <div class="date">
+                    <span class="last_content">Added on </span>
+                    <span class="actual_date">{{ file.time }}</span>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% include 'footer.html' %}
+    {% include 'ext.html' %}
+    {% include 'importjs.html' %}
+</body>
+
+</html>

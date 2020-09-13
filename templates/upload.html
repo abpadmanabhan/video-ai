@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>VideoAI: Upload</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    {% include 'importcss.html' %}
+</head>
+
+<body>
+    {% include 'header.html' %}
+    <div id="upload-container" class="tabs-wrapper">
+        <div class="tabs-header-wrapper">
+            <div class="tabs">
+                <span class="tab current" data-toggle-area="select-form">Template</span>
+                <span class="tab" data-toggle-area="upload-form">Upload</span>
+            </div>
+        </div>
+        <form id="select-form" method="post" enctype="multipart/form-data" action="/upload-preset">
+            <div class="fields">
+                <fieldset>
+                    <legend>Upload picture</legend>
+                    <div class="field">
+                        {% for pic in pics %}
+                        <input id="imgSource{{loop.index}}" class="hidden" type="radio" name="source" value="{{pic}}">
+                        <label for="imgSource{{loop.index}}">
+                            <img src="{{api_host}}/preset-assets/images/{{pic}}" class="preset-image" />
+                        </label>
+                        {% endfor %}
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Upload video</legend>
+                    <div class="field">
+                        {% for video in videos %}
+                        <input id="vidDriver{{loop.index}}" class="hidden" type="radio" name="driver" value="{{video}}">
+                        <label for="vidDriver{{loop.index}}">
+                            <video src="{{api_host}}/preset-assets/videos/{{video}}" class="preset-video"></video>
+                        </label>
+                        {% endfor %}
+                    </div>
+                </fieldset>
+            </div>
+            <div class="buttons">
+                <input class="primary" type="submit" value="Submit">
+            </div>
+        </form>
+        <form id="upload-form" method="post" enctype="multipart/form-data" class="hidden">
+            <div class="fields">
+                <fieldset>
+                    <legend>Upload picture</legend>
+                    <div class="field">
+                        <label for="imgSource">Choose</label>
+                        <input id="imgSource" type="file" name="source">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Upload video</legend>
+                    <div class="field">
+                        <label for="vidDriver">Choose</label>
+                        <input id="vidDriver" type="file" name="driver">
+                    </div>
+                </fieldset>
+            </div>
+            <div class="buttons">
+                <input class="primary" type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    {% include 'footer.html' %}
+    {% include 'ext.html' %}
+    {% include 'importjs.html' %}
+</body>
+
+</html>

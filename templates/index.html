@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>VideoAI: Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    {% include 'importcss.html' %}
+</head>
+
+<body>
+    <div id="container" class="compact">
+        <img class="logo" width="100%" src="/images/rocket-page-logo.png">
+        <h1>VideoAI</h1>
+        <section class="welcome">
+            <ul class="buttons">
+                <li><a class="primary" href="#">Log In</a></li>
+            </ul>
+        </section>
+        <form id="login" class="hidden" method="POST" action="/login">
+            <section>
+                <div class="field">
+                    <label for="username"><svg class="icon">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use>
+                        </svg></label>
+                    <input type="text" name="username" placeholder="Username" class="">
+                </div>
+                <div class="field">
+                    <label for="password"><svg class="icon">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock"></use>
+                        </svg></label>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+            </section>
+            <ul class="buttons">
+                <li><input type="submit" value="Log In" class="primary disabled"></li>
+                <li><a href="#" class="minor">⟵ Go back</a></li>
+            </ul>
+        </form>
+    </div>
+    {% include 'footer.html' %}
+    {% include 'ext.html' %}
+    {% include 'importjs.html' %}
+</body>
+
+</html>

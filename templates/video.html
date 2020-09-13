@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>VideoAI: Watch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    {% include 'importcss.html' %}
+</head>
+
+<body>
+    {% include 'header.html' %}
+
+    <div id="result-container">
+        <div id="loader-msg">Loading...</div>
+        <div class="LoaderBalls hidden">
+            <div class="LoaderBalls__item"></div>
+            <div class="LoaderBalls__item"></div>
+            <div class="LoaderBalls__item"></div>
+        </div>
+        <div class="progress-bar--wrap progress-bar--blue hidden">
+            <div class="progress-bar">
+                <div class="progress-bar--inner" style="width: 0%;"></div>
+            </div>
+            <span class="progress-bar--counter"></span>
+        </div>
+        <div class="video-wrapper"></div>
+    </div>
+    {% include 'footer.html' %}
+    {% include 'ext.html' %}
+    {% include 'importjs.html' %}
+    <script>
+        function proceed(status) {
+            var checkpoints = [5, 10, 20, 40, 60, 90, 100];
+            var nextOne = checkpoints[0]
+            for (var i = 1; i < checkpoints.length; i++) {
+                if (checkpoints[i] > status) {
+                    nextOne = checkpoints[i];
+                    break;
+                }
+            }
+            return ((nextOne - status) > 3) ? true : false;
+        }
+        var is_success = false;
+        var initial = true;
+        var progress = 0;
+        (function poll() {
+            let timeout = setTimeout(function () {
+                $.ajax({
+                    url: "{{ status_url }}",
+                    type: "GET",
+                    success: function (data) {
+                        console.log(data);
+                        if (data) {
+                            if (data.status == "Complete" && data.video && data.video.trim()) {
+                                is_success = true;
+
+                                var renderVideo = function () {
+                                    var $video = $('<video />', {
+                                        id: 'output-video',
+                                        src: "{{ video_host }}" + data.video,
+                                        type: 'video/webm',
+                                        controls: true,
+                                        width: "100%",
+                                        autoplay: true
+                                    });
+                                    $(".video-wrapper").empty().append($video);
+                                }
+
+                                $("#loader-msg").addClass("hidden");
+                                $(".LoaderBalls").addClass("hidden");
+                                if ($(".progress-bar--wrap").is(":visible")) {
+                                    $(".progress-bar--inner").width("100%");
+                                    $(".progress-bar--counter").text("100%");
+                                    $(".progress-bar--wrap").fadeOut(500, renderVideo);
+                                } else {
+                                    renderVideo();
+                                }
+                            } else if (!isNaN(data.status)) {
+                                var noProgress = (progress == parseInt(data.status));
+                                var current = parseInt($(".progress-bar--inner").width() * 100 / $(".progress-bar").width());
+                                var goNext = proceed(noProgress ? current : parseInt(data.status));
+                                $("#loader-msg").text("Cooking! Stay tuned...");
+                                $(".LoaderBalls").addClass("hidden");
+                                $(".progress-bar--wrap").removeClass("hidden");
+                                if (noProgress && goNext) {
+                                    $(".progress-bar--inner").width(parseInt(current + 2) + "%");
+                                    $(".progress-bar--counter").text(parseInt(current + 2) + "%");
+                                } else if (noProgress) {
+                                    $(".progress-bar--inner").width(parseInt(current) + "%");
+                                    $(".progress-bar--counter").text(parseInt(current) + "%");
+                                } else {
+                                    $(".progress-bar--inner").width(parseInt(data.status) + "%");
+                                    $(".progress-bar--counter").text(parseInt(data.status) + "%");
+                                }
+                                progress = parseInt(data.status);
+                                poll();
+                            } else if (data.status == "In Progress") {
+                                $("#loader-msg").text("Cooking! Stay tuned...");
+                                $(".LoaderBalls").addClass("hidden");
+                                $(".progress-bar--wrap").removeClass("hidden");
+                                $(".progress-bar--inner").width("0%");
+                                $(".progress-bar--counter").text("0%");
+                                poll();
+                            } else if (data.status == "Pending") {
+                                $(".progress-bar--wrap").addClass("hidden");
+                                $("#loader-msg").text("Yours is in queue.");
+                                $(".LoaderBalls").removeClass("hidden");
+                                poll();
+                            } else if (data.status == "Failed") {
+                                $(".progress-bar--wrap").addClass("hidden");
+                                $("#loader-msg").text("Sorry we couldn't process your inputs! Try a different combination.");
+                                $(".LoaderBalls").addClass("hidden");
+                            }
+                        } else {
+                            $("#loader-msg").text("Oops! Cannot find the video!");
+                            $(".progress-bar--wrap").addClass("hidden");
+                            $(".LoaderBalls").addClass("hidden");
+                        }
+                    },
+                    error: function (data) {
+                        $("#loader-msg").text("Sorry, something went wrong!");
+                        $(".progress-bar--wrap").addClass("hidden");
+                        $(".LoaderBalls").addClass("hidden");
+                    },
+                    dataType: "json",
+                    timeout: 5000
+                })
+            }, initial ? 0 : 5500);
+            if (is_success) {
+                console.log("ending poll");
+                window.clearTimeout(timeout);
+            }
+        })();
+        initial = false;
+    </script>
+</body>
+
+</html>
